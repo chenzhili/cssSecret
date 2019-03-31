@@ -1,0 +1,38 @@
+.btn{
+    display: inline-block;
+    padding:.3em .8em;
+    line-height:1.5;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:.2em;
+    box-shadow:0 .05em .25em gray;
+    color:white;
+    text-shadow:0 -.05em .05em rgba(0,0,0,.5);
+    font-size:125%;
+    background:#58a linear-gradient(hsla(0,0%,100%,.2),transparent)
+}
+body{
+    color:#f00;
+}
+.param-cc{
+    border:1px solid currentColor;
+
+}
+.callout{
+    margin-top:5em;
+    width:12em;
+    height:3em;
+    background:#ff0;
+    border:1px solid rgba(0,0,0,.3);
+    position: relative;
+}
+.callout::before{
+    position:absolute;
+    content:"";
+    padding:.3em;
+    background:inherit;
+    border:inherit;
+    top:-.4em;left:1em;
+    border-right:0;
+    border-bottom:0;
+    transform:rotate(45deg);
+}
