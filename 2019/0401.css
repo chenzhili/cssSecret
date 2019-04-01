@@ -11,11 +11,52 @@
                     url("image.png") 140px 40px/200px 100px no-repeat content-box #58a;
 */
 body{
-    background:rgba(0,0,1,.5);
+    /* background:linear-gradient(red,transparent); */
+    background:url('http://csssecrets.io/images/stone-art.jpg');
+    /* height: 100vh; */
 }
 .border-config{
+    /* 实现 容器 背景 透过 半透明的 边框 下 显示出来 */
+    /* 
+        在 css3 中 出现 background-color：元素 背景 所在 的 区域
+        border-box:默认值，边框为界
+        content-box: 内容为界
+        padding-box 内边距外围 为界
+    */
+    width:100px;
+    height:100px;
+    background: white;
+    border:10px solid rgba(250,250,250,.5);
+    background-clip:padding-box;
+}
+/* 多重边框 */
+/* 
+    就是用 box-shadow 实现
+    同时这里 对于 box-shadow 新的 理解；
+    box-shadow:x y 模糊度 颜色 扩展半径；
+    x,y是相对 的 偏移量，下和右为正，这个 就相当于 对于 元素 赋值 一份 并且对他 做 position:relative；移动一样，并没有改变 元素大小；
+    模糊度：就是对于 该元素 进行 模糊处理，像素越大 模糊宽度越大；
+    扩展半径：就相当于 将 元素 进行了 缩放；
+*/
+.multiple-borders{
+    /* 这种 边框 不能 响应 用户事件，因为在 元素 外边 ，不会影响 布局*/
+    /* margin:30px auto;
     width:100px;
     height:100px;
     background:white;
-    border:3px solid rgba(250,250,250,.3);
+    box-shadow:#f00 0 0 0 5em,#ff0 0 0 0 10em; */
+    /* 如果 想 用户 响应者中事件 ，用 inset 和 padding 放在 元素 内部，就可以了 */
+    margin:30px auto;
+    width:100px;
+    height:100px;
+    background:white;
+    box-shadow:#f00 0 0 0 5em inset,#ff0 0 0 0 10em inset;
+    padding:10em;
+}
+.tow-borders-active{
+    margin:3em auto;
+    width:100px;
+    height:100px;
+    border:5px solid #ff0;
+    outline:10px solid #000; /* 这个 不能像 box-shadow 一样 逗号 链式 结构 ，只能写一个 */
 }
