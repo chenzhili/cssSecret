@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css揭秘</title>
-    <link rel="stylesheet" href="./2019/0331.css">
+    <!-- <link rel="stylesheet" href="./2019/0331.css"> -->
+    <link rel="stylesheet" href="./2019/0401.css">
 </head>
+
 <body>
-    <div class="btn" style="background-color:#f00">
+    <!-- ./2019/0331 -->
+    <!-- <div class="btn" style="background-color:#f00">
         test
     </div>
-    <div class="param-cc">测试</div>
+    <div class="param-cc">测试</div> -->
     <!-- 继承 -->
-    <div class="callout"></div>
+    <!-- <div class="callout"></div> -->
+
+    <!-- ./2019/0401 -->
+    <div class="border-config"></div>
+    <!-- <script>
+        var arr = [[1, 2, 4, 5], [11, 22, 33, 44], [111, 222, 333, 444]];
+        let test = dealArrResult(arr);
+        console.log(test);
+        function dealArrResult(arr) {
+            let parentArr = arr[0];
+            return parentArr.reduce((prev, next, index) => {
+                let tempObj = {};
+                tempObj.name = next;
+                tempObj.children = childrenArr(arr, index, 1);
+                prev.push(tempObj);
+                return prev;
+            }, [])
+            function childrenArr(arr, parentIndex, deepIndex) {
+                if (!arr[deepIndex] || !arr[deepIndex].length) return [];
+                return [{
+                    name:arr[deepIndex][parentIndex],
+                    children : childrenArr(arr, parentIndex, deepIndex + 1)
+                }]
+            }
+        }
+    </script> -->
 </body>
+
 </html>
