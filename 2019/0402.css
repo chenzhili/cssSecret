@@ -1,0 +1,17 @@
+.active-backg-position{
+    width:100px;
+    height:100px;
+    border:1px solid #ff0;
+    background:url("http://csssecrets.io/images/code-pirate.svg") no-repeat #58a right bottom;/* 如果 对于 back-posi的 扩展语法 有问题的时候，做兼容 */
+    background-position:right 1em bottom 1em;
+    padding:40px;
+    /* 注意 background-origin 和 background-clip 的区别：
+        两个 值 是一样的，但是 对于 两者 的区别，
+        background-origin: 是 针对 background-position 的 top right 等 关键字 相对于 盒子模型 的 参照物；
+        background-clip: 元素 背景坐在的区域
+
+        可以看 二者的 区别 如下
+    */
+    background-origin:content-box;
+    /* background-clip:content-box; */
+}

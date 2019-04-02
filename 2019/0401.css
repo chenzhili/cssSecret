@@ -18,7 +18,7 @@ body{
 .border-config{
     /* 实现 容器 背景 透过 半透明的 边框 下 显示出来 */
     /* 
-        在 css3 中 出现 background-color：元素 背景 所在 的 区域
+        在 css3 中 出现 background-clip：元素 背景 所在 的 区域
         border-box:默认值，边框为界
         content-box: 内容为界
         padding-box 内边距外围 为界
