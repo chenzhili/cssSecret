@@ -15,3 +15,13 @@
     background-origin:content-box;
     /* background-clip:content-box; */
 }
+.rounded-corners{
+    margin: 5em auto;
+    width:100px;
+    height:100px;
+    background:#f00;
+    border:1px solid #f00;
+    border-radius:.5em;
+    box-shadow:0 0 0 .5em #ff0;
+    outline:.5em solid #ff0;
+}
