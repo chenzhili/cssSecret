@@ -4,12 +4,41 @@
     对于 linear-gradient 函数 详细解释：
      linear-gradient(direction,color-stop1, color-stop2,...);
      direction:是指 线性 渐变的 方向，默认 是从 上 到下(180deg),0deg 为 下 --> 上, 90deg 为 左 --> 右；
-     color-stop1:是 起止颜色，这项 可以加 两个值 （百分比 颜色,百分比 颜色,...）,相对 的 百分比 是对于 background-size来说
+     color-stop1:是 起止颜色，这项 可以加 两个值 （颜色 百分比,颜色 百分比,...）(*****必须先 颜色 在 百分比*****),相对 的 百分比 是对于 background-size来说
 */
-/* 对于 linear-gradient 的 值 起止 值的 理解 还有点问题 */
-.stripe-bg{
+/* 对于 linear-gradient 的 值 起止 值的 理解 还有点问题？
+    对于 下面这句话的理解 的理解：
+        background:linear-gradient(45deg,#f00 25%,#ff0 0,#ff0 50%,#f00 0,#f00 75%,#ff0 0);
+        从 25%的 #f00 渐变到 25% 的 #ff0(这里由于 过渡区域 无限小，此处就 直接 变成 #ff0),再渐变到 50% 的 #ff0(由于 与 25% 出 的 颜色一样 所以 就是一个颜色)，以此 类推 后面的 颜色；
+*/
+.stripe-bg-v{
     width:20em;
     height:10em;
-    background:linear-gradient(45deg,#fb3 25%,#58a 0,#fb3 50%,#58a 0);
-    background-size:30px 30px;
+    background:linear-gradient(#f00 50%,#ff0 0);
+    background-size:100% 30px;
+}
+.stripe-bg-h{
+    width:20em;
+    height:10em;
+    background:linear-gradient(to right,#f00 50%,#ff0 0);
+    background-size:30px 100%;
+}
+.stripe-bg-45deg{
+    width:20em;
+    height:10em;
+    background:linear-gradient(45deg,#f00 25%,#ff0 0,#ff0 50%,#f00 0,#f00 75%,#ff0 0);
+    /* background:linear-gradient(45deg,25% #f00,0 #0f0,50% #0f0,0 #f00,#f00 75%,#0f0 0); */ /*这种写法有问题*/
+    background-size:30px 30px; /* 由于 background-size 的参数 指的是 width（水平方向） 和 height （垂值方向），导致 实际的 条纹 宽度 为 15px/√2,所以看起来 要短些   */
+}
+.stripe-bg-45deg-really{
+    width:20em;
+    height:10em;
+    background:linear-gradient(45deg,#f00 25%,#ff0 0,#ff0 50%,#f00 0,#f00 75%,#ff0 0);
+    background-size:42.4px 42.4px;
+}
+/* 任意角度 的 斜向 条纹 */
+.stripe-bg-any-deg{
+    width:20em;
+    height:10em;
+    background:repeating-linear-gradient(45deg,#f00 0,#f00 15px,#ff0 0,#ff0 30px); /* 这里的 角度 可以指定为 任意值，不用再去 管background-size */
 }
