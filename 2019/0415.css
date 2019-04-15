@@ -1,0 +1,51 @@
+.complecated-bg1{
+    width:20em;
+    height:10em;
+    background: linear-gradient(#ff0 50%,transparent 0),
+        linear-gradient(90deg,#ff0 50%,transparent 0);
+    background-size:30px 30px;
+}
+.complecated-bg2{
+    width:20em;
+    height:10em;
+    /* background:#f00 linear-gradient(white 1px,transparent 0),linear-gradient(to right,white 1px,transparent 0); *//*这种写法有问题*/
+    background-image:linear-gradient(white 1px,transparent 0),linear-gradient(to right,white 1px,transparent 0);
+    background-color:#58a;
+    background-size:30px 30px;
+}
+.complecated-bg3{
+    width:20em;
+    height:10em;
+    background-color:#58a;
+    background-image:linear-gradient(white 1px,transparent 0),linear-gradient(to right,white 1px,transparent 0),linear-gradient(white 2px,transparent 0),linear-gradient(to right,white 2px,transparent 0);
+    background-size:15px 15px,15px 15px,75px 75px,75px 75px;
+}
+/* 
+    径向渐变 radial-gradient :是从“一个点”向四周的颜色渐变
+    background: radial-gradient(center, shape, size, start-color, ..., last-color);
+        center：渐变起点的位置，可以为百分比，默认是图形的正中心。
+        shape：渐变的形状，ellipse表示椭圆形，circle表示圆形。默认为ellipse，如果元素形状为正方形的元素，则ellipse和circle显示一样。
+        size：渐变的大小，即渐变到哪里停止，它有四个值。 closest-side：最近边； farthest-side：最远边； closest-corner：最近角； farthest-corner：最远角
+*/
+.complecated-radial-bg1{
+    width:20em;
+    height:10em;
+    background-color:#655;
+    background-image: radial-gradient(circle,tan 30%,transparent 0),radial-gradient(circle,tan 30%,transparent 0);
+    background-size: 20px 20px;
+    background-position:0 0,10px 10px;
+}
+.complecated-test{
+    width:20em;
+    height:10em;
+    background-color:rgba(250,250,250,.9);
+    background-image:
+    linear-gradient(45deg,#bbb 25%,transparent 0),
+    linear-gradient(45deg,transparent 75%,#bbb 0),
+    linear-gradient(45deg,#bbb 25%,transparent 0),
+    linear-gradient(45deg,transparent 75%,#bbb 0);
+    /* linear-gradient(225deg,#bbb 25%,transparent 0,transparent 50%); */
+    background-size:30px 30px;
+    background-position:0 0,15px 15px,15px 15px,30px 30px; /*正的 和 写 负的 15px 是一样，因为 用上一个 图形进行 叠加没问题*/
+}
+
