@@ -1,0 +1,25 @@
+/* 
+    animation：中有一个 
+        animation-timing-functiom 对于 这个属性：
+        应该分为两大类：贝塞尔曲线 和 steps 曲线；
+         大部分 都用得 贝塞尔曲线，在 时间范围内，都是平滑的 动画
+         steps(number,position)：将整个动画 分成 number 帧。并且 每帧之间不是 平滑 过渡动画而是 切开；（跳跃的 方式）
+         position:默认为 end，指 在 每一帧的 结束 出 跳跃到 新的 画面；还有 start：值 在 每次 开始 的时候 开始 跳跃动画
+*/
+/* 这里必须是等宽 字体，才能用 ch 这个 0 字符 的宽度进行运用 */
+.typing-effect{
+    font: bold 200% Consolas, Monaco, monospace;
+    color:#fff;
+    /* width:15ch; *//*用动态 的方式*/
+    animation:typing 6s,caret .5s steps(1) infinite; 
+    white-space:nowrap;
+    overflow:hidden;
+    border-right:.05em solid;
+    /* animation-fill-mode: forwards; */
+}
+@keyframes typing{
+    from{width:0;}
+} 
+@keyframes caret{
+    from{border-color:transparent;}
+}
