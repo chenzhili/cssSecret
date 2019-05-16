@@ -1,0 +1,21 @@
+/* 
+    border-image的理解：border-image有 
+    border-image-source：必填，图片的 资源
+    border-image-slice：默认值为 100%，裁剪 的地方，跟 background-position一样，切四刀成为 九宫格；（上 右 下 左，上 左右 下 ）
+    border-image-width：默认为 1，这个number 指的是 border-width的倍数,拉升的 空间
+    border-image-outset：默认值为 0，向外移动 的值
+    border-image-repeat：重复方式：默认为 stretch，还有 round，repeat
+    关于round 和repeat 的区别。
+    round会凑整填充（进行了适度的拉伸）。repeat不进行拉伸，不凑整。 具体效果看文章后边的例子。
+具体对于此的 详解在：
+    https://segmentfault.com/a/1190000010969367
+*/
+.border-image-test{
+    width:20em;
+    height:10em;
+    border:10px solid #ddd;
+    border-image: url("http://csssecrets.io/images/stone-art.jpg") 10 10;
+    background-color:#ff0;
+    background-clip:content-box;
+    border-width:10px;
+}
