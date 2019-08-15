@@ -14,6 +14,45 @@
     <!-- <link rel="stylesheet" href="./2019/0417.css"> -->
     <!-- <link rel="stylesheet" href="./2019/0420.css"> -->
     <link rel="stylesheet" href="./2019/0516.css">
+    <style>
+        .test-content {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            border-collapse: separate;
+        }
+
+        .test-content::after { 
+            position: absolute;
+            content:"";
+            top: 50%;
+            left: 21%;
+            display: table;
+            width: 5.71428571px;
+            height: 9.14285714px;
+            border: 2px solid #fff;
+            border-top: 0;
+            border-left: 0;
+            transform: rotate(45deg) scale(1) translate(-50%, -50%);
+            background:#1990ff;
+        }
+        .test-content::before { 
+            position: absolute;
+            content:"";
+            top: 50%;
+            left: 21%;
+            display: table;
+            width: 5.71428571px;
+            height: 9.14285714px;
+            border: 2px solid #fff;
+            border-top: 0;
+            border-left: 0;
+            transform: rotate(-45deg) scale(1) translate(-50%, -50%);
+            background:#1990ff;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,7 +92,7 @@
     <div class="complecated-test"></div>
         <div class="complecated-test-simple"></div>
     </div> -->
-    
+
     <!-- ./2019/0417.css -->
     <!-- <div style="display:flex;flex-wrap:wrap;">
         <div class="border-image-test"></div>
@@ -73,17 +112,21 @@
             typing.style.animationTimingFunction =  `steps(${len})`;
         }
     </script> -->
-    
+
     <!-- ./2019/0516.css 行内块级元素 实现 垂值居中-->
-        <!-- 用 伪类 巧妙实现的 -->
-        <div class="parent">
-            <div class="child"></div>
-        </div>
-        <!-- 用 display为 table-cell 实现 -->
-        <br>
-        <div class="parent1">
-            <div class="child1">aaaaa</div>
-        </div>
+    <!-- 用 伪类 巧妙实现的 -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <!-- 用 display为 table-cell 实现 -->
+    <br>
+    <div class="parent1">
+        <div class="child1">aaaaa</div>
+    </div>
+
+
+    <!-- 测试 -->
+    <div class="test-content"></div>
 
     <!-- <script>
         var arr = [[1, 2, 4, 5], [11, 22, 33, 44], [111, 222, 333, 444]];
